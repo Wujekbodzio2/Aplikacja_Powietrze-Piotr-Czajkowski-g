@@ -1,0 +1,5 @@
+## Wymagania
+
+- Visual Studio
+- vcpkg (menedżer pakietów C++)
+- Biblioteki: `curl`, `jsoncpp`
