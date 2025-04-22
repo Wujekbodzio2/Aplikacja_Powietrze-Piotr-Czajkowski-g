@@ -1,0 +1,34 @@
+\doxysection{Chart\+Panel.\+h}
+\hypertarget{_chart_panel_8h_source}{}\label{_chart_panel_8h_source}\index{src/ChartPanel.h@{src/ChartPanel.h}}
+\mbox{\hyperlink{_chart_panel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Plik:\ ChartPanel.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_measurement_8h}{Measurement.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_chart_panel_af4d12480f516ac3f934fe55f6c3d7e24}{ChartPanel}}\ :\ \textcolor{keyword}{public}\ wxPanel\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_chart_panel_af4d12480f516ac3f934fe55f6c3d7e24}{ChartPanel}}(wxWindow*\ parent);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chart_panel_aaca1015a03d0714795ae52a3fdd010a8}{SetData}}(\textcolor{keyword}{const}\ std::vector<Measurement>\&\ measurements,\ \textcolor{keyword}{const}\ wxString\&\ title);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chart_panel_ad8c439941d5c836797074b4fc9dc58e4}{ClearData}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ OnPaint(wxPaintEvent\&\ event);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ OnSize(wxSizeEvent\&\ event);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<Measurement>\ data;\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ wxString\ chartTitle;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{double}\ minValue;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{double}\ maxValue;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ wxDECLARE\_EVENT\_TABLE();\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

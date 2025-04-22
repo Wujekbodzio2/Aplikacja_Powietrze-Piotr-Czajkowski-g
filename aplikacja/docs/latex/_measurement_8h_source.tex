@@ -1,0 +1,26 @@
+\doxysection{Measurement.\+h}
+\hypertarget{_measurement_8h_source}{}\label{_measurement_8h_source}\index{src/Measurement.h@{src/Measurement.h}}
+\mbox{\hyperlink{_measurement_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_measurement_a5395952f1b76e01b6f4cf9e502656367}{Measurement}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_measurement_a5395952f1b76e01b6f4cf9e502656367}{Measurement}}(\textcolor{keyword}{const}\ std::string\&\ date,\ \textcolor{keywordtype}{double}\ value)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ :\ date\_(date),\ value\_(value)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \mbox{\hyperlink{class_measurement_a5f0a2de403861608db61ab5707797110}{getDate}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ date\_;\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_measurement_a6490193f02e52c5b67d6a8fa162e6e59}{getValue}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ value\_;\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_measurement_a5f6908c35e329530bc57758667ade7c8}{isValid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ value\_\ >=\ 0;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ date\_;\ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ value\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

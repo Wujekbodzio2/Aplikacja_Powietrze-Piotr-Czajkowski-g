@@ -1,0 +1,202 @@
+\doxysection{Database\+Manager Class Reference}
+\hypertarget{class_database_manager}{}\label{class_database_manager}\index{DatabaseManager@{DatabaseManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_database_manager_aae3d371490cc70db818f8ac7324af050}{Database\+Manager}} (const std\+::string \&db\+File\+Path="{}air\+\_\+qualitydata.\+json"{})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_database_manager}{Database\+Manager}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_database_manager_abd5789ca4cbca2faf4e90f01d7450b47}{save\+Data}} (int station\+Id, const std\+::string \&station\+Name, int sensor\+Id, const std\+::string \&sensor\+Name, const std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements, const std\+::map$<$ std\+::string, std\+::string $>$ \&index\+Values=std\+::map$<$ std\+::string, std\+::string $>$())
+\begin{DoxyCompactList}\small\item\em Zapisuje pomiary i opcjonalnie indeksy jakoœci powietrza do lokalnej bazy (JSON). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_database_manager_a410a597694ababf6211a4ce4de041a2a}{load\+Data}} (int station\+Id, int sensor\+Id, std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&measurements)
+\begin{DoxyCompactList}\small\item\em Wczytuje dane pomiarowe z lokalnej bazy danych. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_database_manager_a487338dde447ae8ddde8e5d6f4501ec1}{get\+Saved\+Stations}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca listê zapisanych stacji w bazie danych. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \mbox{\hyperlink{class_database_manager_af909e3d98732ae9d051e366b50f2523b}{get\+Saved\+Sensors}} (int station\+Id)
+\begin{DoxyCompactList}\small\item\em Zwraca listê zapisanych sensorów dla danej stacji. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_database_manager_a916196ce760fef52a347d179d2faf6c5}{load\+Air\+Quality\+Index}} (int station\+Id, std\+::map$<$ std\+::string, std\+::string $>$ \&index\+Values)
+\begin{DoxyCompactList}\small\item\em Wczytuje indeks jakoœci powietrza dla stacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_database_manager_aae3d371490cc70db818f8ac7324af050}\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DatabaseManager()}{DatabaseManager()}}
+{\footnotesize\ttfamily \label{class_database_manager_aae3d371490cc70db818f8ac7324af050} 
+Database\+Manager\+::\+Database\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+File\+Path}{ = {\ttfamily "{}air\+\_\+qualitydata.json"{}}}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_database_manager}{Database\+Manager}. 
+
+Konstruktor \doxylink{class_database_manager}{Database\+Manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+File\+Path} & Œcie¿ka do pliku bazy danych JSON (domyœlnie "{}air\+\_\+qualitydata.\+json"{}).\\
+\hline
+\end{DoxyParams}
+Inicjalizuje œcie¿kê do pliku bazy danych i ³aduje dane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+File\+Path} & Œcie¿ka do pliku JSON z danymi. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_database_manager_af909e3d98732ae9d051e366b50f2523b}\index{DatabaseManager@{DatabaseManager}!getSavedSensors@{getSavedSensors}}
+\index{getSavedSensors@{getSavedSensors}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getSavedSensors()}{getSavedSensors()}}
+{\footnotesize\ttfamily \label{class_database_manager_af909e3d98732ae9d051e366b50f2523b} 
+std\+::vector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ Database\+Manager\+::get\+Saved\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Zwraca listê zapisanych sensorów dla danej stacji. 
+
+Pobiera zapisane sensory przypisane do danej stacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor par \texorpdfstring{$<$}{<}ID sensora, nazwa sensora\texorpdfstring{$>$}{>}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor par\+: ID sensora i nazwa sensora. 
+\end{DoxyReturn}
+\Hypertarget{class_database_manager_a487338dde447ae8ddde8e5d6f4501ec1}\index{DatabaseManager@{DatabaseManager}!getSavedStations@{getSavedStations}}
+\index{getSavedStations@{getSavedStations}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getSavedStations()}{getSavedStations()}}
+{\footnotesize\ttfamily \label{class_database_manager_a487338dde447ae8ddde8e5d6f4501ec1} 
+std\+::vector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Database\+Manager\+::get\+Saved\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zwraca listê zapisanych stacji w bazie danych. 
+
+Pobiera zapisane stacje z bazy danych.
+
+\begin{DoxyReturn}{Returns}
+Wektor par \texorpdfstring{$<$}{<}ID stacji, nazwa stacji\texorpdfstring{$>$}{>}.
+
+Wektor par\+: ID stacji i nazwa stacji. 
+\end{DoxyReturn}
+\Hypertarget{class_database_manager_a916196ce760fef52a347d179d2faf6c5}\index{DatabaseManager@{DatabaseManager}!loadAirQualityIndex@{loadAirQualityIndex}}
+\index{loadAirQualityIndex@{loadAirQualityIndex}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{loadAirQualityIndex()}{loadAirQualityIndex()}}
+{\footnotesize\ttfamily \label{class_database_manager_a916196ce760fef52a347d179d2faf6c5} 
+bool Database\+Manager\+::load\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{index\+Values}{}\end{DoxyParamCaption})}
+
+
+
+Wczytuje indeks jakoœci powietrza dla stacji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+{\em index\+Values} & Referencja do mapy, do której zostan¹ za³adowane indeksy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeœli dane zosta³y odnalezione i wczytane, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_database_manager_a410a597694ababf6211a4ce4de041a2a}\index{DatabaseManager@{DatabaseManager}!loadData@{loadData}}
+\index{loadData@{loadData}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily \label{class_database_manager_a410a597694ababf6211a4ce4de041a2a} 
+bool Database\+Manager\+::load\+Data (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{int}]{sensor\+Id}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{}\end{DoxyParamCaption})}
+
+
+
+Wczytuje dane pomiarowe z lokalnej bazy danych. 
+
+Wczytuje dane pomiarowe z pliku.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+{\em sensor\+Id} & ID sensora. \\
+\hline
+{\em measurements} & Referencja do wektora, do którego zostan¹ za³adowane dane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeœli dane zosta³y poprawnie wczytane, false w przeciwnym razie.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+{\em sensor\+Id} & ID sensora. \\
+\hline
+{\em measurements} & Referencja do wektora, do którego zostan¹ za³adowane dane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeœli dane zosta³y odnalezione i wczytane, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_database_manager_abd5789ca4cbca2faf4e90f01d7450b47}\index{DatabaseManager@{DatabaseManager}!saveData@{saveData}}
+\index{saveData@{saveData}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily \label{class_database_manager_abd5789ca4cbca2faf4e90f01d7450b47} 
+bool Database\+Manager\+::save\+Data (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{const std\+::string \&}]{station\+Name}{, }\item[{int}]{sensor\+Id}{, }\item[{const std\+::string \&}]{sensor\+Name}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \&}]{measurements}{, }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{index\+Values}{ = {\ttfamily std\+:\+:map$<$std\+:\+:string,~std\+:\+:string$>$()}}\end{DoxyParamCaption})}
+
+
+
+Zapisuje pomiary i opcjonalnie indeksy jakoœci powietrza do lokalnej bazy (JSON). 
+
+Zapisuje dane pomiarowe do pliku.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+{\em station\+Name} & Nazwa stacji. \\
+\hline
+{\em sensor\+Id} & ID sensora. \\
+\hline
+{\em sensor\+Name} & Nazwa sensora. \\
+\hline
+{\em measurements} & Wektor pomiarów do zapisania. \\
+\hline
+{\em index\+Values} & (opcjonalnie) Mapa indeksów jakoœci powietrza, gdzie kluczem jest nazwa indeksu (np. "{}\+Ogólny"{}), a wartoœci¹ opis (np. "{}\+Dobry"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeœli zapis danych i indeksów zakoñczy³ siê sukcesem, false w przeciwnym razie.
+\end{DoxyReturn}
+Aktualizuje informacje o stacjach i sensorach oraz nadpisuje dane pomiarowe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji. \\
+\hline
+{\em station\+Name} & Nazwa stacji. \\
+\hline
+{\em sensor\+Id} & ID sensora. \\
+\hline
+{\em sensor\+Name} & Nazwa sensora. \\
+\hline
+{\em measurements} & Wektor pomiarów do zapisania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeœli zapis siê powiód³, false w przeciwnym razie. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_database_manager_8h}{Database\+Manager.\+h}}\item 
+src/\mbox{\hyperlink{_database_manager_8cpp}{Database\+Manager.\+cpp}}\end{DoxyCompactItemize}

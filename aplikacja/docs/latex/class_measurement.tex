@@ -1,0 +1,82 @@
+\doxysection{Measurement Class Reference}
+\hypertarget{class_measurement}{}\label{class_measurement}\index{Measurement@{Measurement}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_measurement_a5395952f1b76e01b6f4cf9e502656367}{Measurement}} (const std\+::string \&date, double value)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_measurement}{Measurement}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_measurement_a5f0a2de403861608db61ab5707797110}{get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca datê pomiaru. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_measurement_a6490193f02e52c5b67d6a8fa162e6e59}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca wartoœæ pomiaru. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_measurement_a5f6908c35e329530bc57758667ade7c8}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy pomiar jest prawid³owy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_measurement_a5395952f1b76e01b6f4cf9e502656367}\index{Measurement@{Measurement}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!Measurement@{Measurement}}
+\doxysubsubsection{\texorpdfstring{Measurement()}{Measurement()}}
+{\footnotesize\ttfamily \label{class_measurement_a5395952f1b76e01b6f4cf9e502656367} 
+Measurement\+::\+Measurement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{date}{, }\item[{double}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor klasy \doxylink{class_measurement}{Measurement}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & Data wykonania pomiaru (w formacie tekstowym). \\
+\hline
+{\em value} & Wartoœæ pomiaru. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_measurement_a5f0a2de403861608db61ab5707797110}\index{Measurement@{Measurement}!getDate@{getDate}}
+\index{getDate@{getDate}!Measurement@{Measurement}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \label{class_measurement_a5f0a2de403861608db61ab5707797110} 
+std\+::string Measurement\+::get\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca datê pomiaru. 
+
+\begin{DoxyReturn}{Returns}
+Data w formacie std\+::string. 
+\end{DoxyReturn}
+\Hypertarget{class_measurement_a6490193f02e52c5b67d6a8fa162e6e59}\index{Measurement@{Measurement}!getValue@{getValue}}
+\index{getValue@{getValue}!Measurement@{Measurement}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{class_measurement_a6490193f02e52c5b67d6a8fa162e6e59} 
+double Measurement\+::get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca wartoœæ pomiaru. 
+
+\begin{DoxyReturn}{Returns}
+Wartoœæ jako liczba zmiennoprzecinkowa. 
+\end{DoxyReturn}
+\Hypertarget{class_measurement_a5f6908c35e329530bc57758667ade7c8}\index{Measurement@{Measurement}!isValid@{isValid}}
+\index{isValid@{isValid}!Measurement@{Measurement}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily \label{class_measurement_a5f6908c35e329530bc57758667ade7c8} 
+bool Measurement\+::is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sprawdza, czy pomiar jest prawid³owy. 
+
+Pomiar uznaje siê za prawid³owy, jeœli jego wartoœæ jest wiêksza lub równa 0.
+
+\begin{DoxyReturn}{Returns}
+true jeœli wartoœæ jest poprawna, false w przeciwnym razie. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_measurement_8h}{Measurement.\+h}}\end{DoxyCompactItemize}

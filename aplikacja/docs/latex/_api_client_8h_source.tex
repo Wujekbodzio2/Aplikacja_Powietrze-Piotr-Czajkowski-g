@@ -1,0 +1,40 @@
+\doxysection{Api\+Client.\+h}
+\hypertarget{_api_client_8h_source}{}\label{_api_client_8h_source}\index{src/ApiClient.h@{src/ApiClient.h}}
+\mbox{\hyperlink{_api_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ APICLIENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ APICLIENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <json/json.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_t_a_t_i_o_n_8h}{Station.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor_8h}{Sensor.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_measurement_8h}{Measurement.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_api_client_a7576910c0aee4b187826fb82e227dac5}{ApiClient}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_api_client_a7576910c0aee4b187826fb82e227dac5}{ApiClient}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_api_client_ab4fae42eee49854da3247d72d01c165d}{\string~ApiClient}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<Station>\ \mbox{\hyperlink{class_api_client_ac2abd7a59f0274d43229d1db8e824dd9}{getStations}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ std::vector<Sensor>\ \mbox{\hyperlink{class_api_client_a55c752410f1e0db8daac98aab833eca0}{getSensors}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<Measurement>\ \mbox{\hyperlink{class_api_client_ada0e78d931fc0798cdae7a8182f912ce}{getSensorData}}(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::map<std::string,\ std::string>\ \mbox{\hyperlink{class_api_client_a6fab290d107160dcc85f941847c3686b}{getAirQualityIndex}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ WriteCallback(\textcolor{keywordtype}{void}*\ contents,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{size\_t}\ nmemb,\ \textcolor{keywordtype}{void}*\ userp);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ performCurlRequest(\textcolor{keyword}{const}\ std::string\&\ url,\ std::string\&\ response);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ parseJsonResponse(\textcolor{keyword}{const}\ std::string\&\ jsonResponse,\ Json::Value\&\ parsedRoot);}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APICLIENT\_H}}
+
+\end{DoxyCode}

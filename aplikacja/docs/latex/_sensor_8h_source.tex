@@ -1,0 +1,27 @@
+\doxysection{Sensor.\+h}
+\hypertarget{_sensor_8h_source}{}\label{_sensor_8h_source}\index{src/Sensor.h@{src/Sensor.h}}
+\mbox{\hyperlink{_sensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sensor_a258a448eae1a71ced6e4f3598a689797}{Sensor}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_sensor_a258a448eae1a71ced6e4f3598a689797}{Sensor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ paramName,\ \textcolor{keyword}{const}\ std::string\&\ formula)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ :\ id\_(id),\ paramName\_(paramName),\ paramFormula\_(formula)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sensor_a2f57593dc57b88e0667907e282b4e2ef}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ id\_;\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ \mbox{\hyperlink{class_sensor_a88cc06f253b5e9475242680aa371a3aa}{getParamName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ paramName\_;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{class_sensor_a64d0f7b6862fb03736fda5898b4052b1}{getParamFormula}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ paramFormula\_;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ paramName\_;\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ std::string\ paramFormula\_;\ \ }
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

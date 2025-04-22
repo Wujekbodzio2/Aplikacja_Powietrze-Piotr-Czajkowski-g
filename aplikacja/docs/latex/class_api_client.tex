@@ -1,0 +1,150 @@
+\doxysection{Api\+Client Class Reference}
+\hypertarget{class_api_client}{}\label{class_api_client}\index{ApiClient@{ApiClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_api_client_a7576910c0aee4b187826fb82e227dac5}{Api\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_api_client}{Api\+Client}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_api_client_ab4fae42eee49854da3247d72d01c165d}{\texorpdfstring{$\sim$}{\string~}\+Api\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_api_client}{Api\+Client}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ \mbox{\hyperlink{class_api_client_ac2abd7a59f0274d43229d1db8e824dd9}{get\+Stations}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera listê stacji pomiarowych. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ \mbox{\hyperlink{class_api_client_a55c752410f1e0db8daac98aab833eca0}{get\+Sensors}} (int station\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera listê sensorów dla danej stacji. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ \mbox{\hyperlink{class_api_client_ada0e78d931fc0798cdae7a8182f912ce}{get\+Sensor\+Data}} (int sensor\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera dane pomiarowe dla danego sensora. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_api_client_a6fab290d107160dcc85f941847c3686b}{get\+Air\+Quality\+Index}} (int station\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera indeks jakoœci powietrza dla danej stacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_api_client_a7576910c0aee4b187826fb82e227dac5}\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{ApiClient()}{ApiClient()}}
+{\footnotesize\ttfamily \label{class_api_client_a7576910c0aee4b187826fb82e227dac5} 
+Api\+Client\+::\+Api\+Client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_api_client}{Api\+Client}. 
+
+Inicjalizuje bibliotekÄ™ c\+URL i ustawia lokalizacjÄ™ na jÄ™zyk polski. \Hypertarget{class_api_client_ab4fae42eee49854da3247d72d01c165d}\index{ApiClient@{ApiClient}!````~ApiClient@{\texorpdfstring{$\sim$}{\string~}ApiClient}}
+\index{````~ApiClient@{\texorpdfstring{$\sim$}{\string~}ApiClient}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ApiClient()}{\string~ApiClient()}}
+{\footnotesize\ttfamily \label{class_api_client_ab4fae42eee49854da3247d72d01c165d} 
+Api\+Client\+::\texorpdfstring{$\sim$}{\string~}\+Api\+Client (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{class_api_client}{Api\+Client}. 
+
+CzyÅ›ci globalny stan c\+URL. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_api_client_a6fab290d107160dcc85f941847c3686b}\index{ApiClient@{ApiClient}!getAirQualityIndex@{getAirQualityIndex}}
+\index{getAirQualityIndex@{getAirQualityIndex}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getAirQualityIndex()}{getAirQualityIndex()}}
+{\footnotesize\ttfamily \label{class_api_client_a6fab290d107160dcc85f941847c3686b} 
+std\+::map$<$ std\+::string, std\+::string $>$ Api\+Client\+::get\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera indeks jakoœci powietrza dla danej stacji. 
+
+Pobiera indeks jakoÅ›ci powietrza dla wybranej stacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji, dla której ma byæ pobrany indeks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapa par klucz-\/wartoœæ reprezentuj¹cych indeks jakoœci powietrza.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & Identyfikator stacji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapa z nazwÄ… parametru jako kluczem i poziomem jakoÅ›ci jako wartoÅ›ciÄ…. 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_ada0e78d931fc0798cdae7a8182f912ce}\index{ApiClient@{ApiClient}!getSensorData@{getSensorData}}
+\index{getSensorData@{getSensorData}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getSensorData()}{getSensorData()}}
+{\footnotesize\ttfamily \label{class_api_client_ada0e78d931fc0798cdae7a8182f912ce} 
+std\+::vector$<$ \mbox{\hyperlink{class_measurement}{Measurement}} $>$ Api\+Client\+::get\+Sensor\+Data (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera dane pomiarowe dla danego sensora. 
+
+Pobiera dane pomiarowe z wybranego czujnika.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Id} & ID sensora, dla którego maj¹ byæ pobrane dane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektów typu \doxylink{class_measurement}{Measurement}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Id} & Identyfikator czujnika. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektÃ³w \doxylink{class_measurement}{Measurement} zawierajÄ…cych dane pomiarowe. 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_a55c752410f1e0db8daac98aab833eca0}\index{ApiClient@{ApiClient}!getSensors@{getSensors}}
+\index{getSensors@{getSensors}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getSensors()}{getSensors()}}
+{\footnotesize\ttfamily \label{class_api_client_a55c752410f1e0db8daac98aab833eca0} 
+std\+::vector$<$ \mbox{\hyperlink{class_sensor}{Sensor}} $>$ Api\+Client\+::get\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera listê sensorów dla danej stacji. 
+
+Pobiera listÄ™ czujnikÃ³w dla wybranej stacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji, dla której maj¹ byæ pobrane sensory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektów typu \doxylink{class_sensor}{Sensor}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & Identyfikator stacji. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektÃ³w \doxylink{class_sensor}{Sensor} przypisanych do stacji. 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_ac2abd7a59f0274d43229d1db8e824dd9}\index{ApiClient@{ApiClient}!getStations@{getStations}}
+\index{getStations@{getStations}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{getStations()}{getStations()}}
+{\footnotesize\ttfamily \label{class_api_client_ac2abd7a59f0274d43229d1db8e824dd9} 
+std\+::vector$<$ \mbox{\hyperlink{class_station}{Station}} $>$ Api\+Client\+::get\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera listê stacji pomiarowych. 
+
+Pobiera listÄ™ wszystkich stacji pomiarowych.
+
+\begin{DoxyReturn}{Returns}
+Wektor obiektów typu \doxylink{class_station}{Station}.
+
+Wektor obiektÃ³w \doxylink{class_station}{Station} reprezentujÄ…cych stacje. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_api_client_8h}{Api\+Client.\+h}}\item 
+src/Api\+Client.\+cpp\end{DoxyCompactItemize}

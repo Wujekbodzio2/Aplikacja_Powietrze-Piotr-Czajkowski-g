@@ -1,0 +1,46 @@
+\doxysection{Database\+Manager.\+h}
+\hypertarget{_database_manager_8h_source}{}\label{_database_manager_8h_source}\index{src/DatabaseManager.h@{src/DatabaseManager.h}}
+\mbox{\hyperlink{_database_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_measurement_8h}{Measurement.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor_8h}{Sensor.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_t_a_t_i_o_n_8h}{Station.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <json/json.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_database_manager_aae3d371490cc70db818f8ac7324af050}{DatabaseManager}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_database_manager_aae3d371490cc70db818f8ac7324af050}{DatabaseManager}}(\textcolor{keyword}{const}\ std::string\&\ dbFilePath\ =\ \textcolor{stringliteral}{"{}air\_qualitydata.json"{}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_database_manager_abd5789ca4cbca2faf4e90f01d7450b47}{saveData}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keyword}{const}\ std::string\&\ stationName,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sensorId,\ \textcolor{keyword}{const}\ std::string\&\ sensorName,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Measurement>\&\ measurements,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ indexValues\ =\ std::map<std::string,\ std::string>());}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_database_manager_a410a597694ababf6211a4ce4de041a2a}{loadData}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keywordtype}{int}\ sensorId,\ std::vector<Measurement>\&\ measurements);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::vector<Station>\ \ \mbox{\hyperlink{class_database_manager_a487338dde447ae8ddde8e5d6f4501ec1}{getSavedStations}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::vector<Sensor>\ \mbox{\hyperlink{class_database_manager_af909e3d98732ae9d051e366b50f2523b}{getSavedSensors}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_database_manager_a916196ce760fef52a347d179d2faf6c5}{loadAirQualityIndex}}(\textcolor{keywordtype}{int}\ stationId,\ std::map<std::string,\ std::string>\&\ indexValues);}
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ std::string\ dbFilePath\_;\ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ Json::Value\ dbRoot\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ loadDatabase();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ saveDatabase();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::string\ generateKey(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ }
+\DoxyCodeLine{00106\ \};}
+
+\end{DoxyCode}
