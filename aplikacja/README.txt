@@ -16,7 +16,7 @@ Aplikacja do pobierania i analizy danych o jakości powietrza z wykorzystaniem A
 
 - Visual Studio
 - vcpkg (menedżer pakietów C++)
-- Biblioteki: `curl`, `jsoncpp`
+- Biblioteki: `curl`, `jsoncpp`,`wxwidgets`
 
 ## Instalacja
 
@@ -39,6 +39,7 @@ Aplikacja do pobierania i analizy danych o jakości powietrza z wykorzystaniem A
    ```bash
    .\vcpkg.exe install curl
    .\vcpkg.exe install jsoncpp
+   .\vcpkg.exe install wxwidgets
    ```
 
 ## Uruchamianie
